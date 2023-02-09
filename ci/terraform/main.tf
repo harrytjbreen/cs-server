@@ -18,7 +18,12 @@ module "s3" {
 #  tag_name = var.tag_name
 #}
 
-module "cognito" {
-  source = "./modules/cognito"
-  pool_name = var.cognito_pool_name
+module "amplify" {
+  source = "./modules/amplify"
+  name = var.amplify_name
+}
+
+module "vpc" {
+  source = "./modules/vpc"
+  name = var.vpc_name
 }

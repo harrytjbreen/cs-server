@@ -32,3 +32,13 @@ variable "cognito_pool_name" {
     default = "cs-cognito-pool"
     type = string
 }
+
+variable "amplify_name" {
+    default = "cs-amplify"
+    type = string
+}
+
+variable "vpc_name" {
+    default = "cs-vpc"
+    type = string
+}
