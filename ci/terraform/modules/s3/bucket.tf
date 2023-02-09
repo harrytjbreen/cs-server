@@ -16,3 +16,11 @@ resource "aws_s3_bucket_policy" "root_policy" {
   bucket = var.bucket_name
   policy = templatefile("${path.root}/templates/s3-policy.json", { bucket_name = aws_s3_bucket.bucket.bucket })
 }
+
+output "bucket" {
+  value = aws_s3_bucket.bucket.bucket
+}
+
+output "bucket_domain_name" {
+  value = aws_s3_bucket.bucket.bucket_domain_name
+}
